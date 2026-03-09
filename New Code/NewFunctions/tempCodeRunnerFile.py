@@ -1,2 +1,3 @@
-XOR = lambda y: y^2
-print(XOR(5))
+import requests
+r = requests.get('https://www.google.com')
+print(r.text)
