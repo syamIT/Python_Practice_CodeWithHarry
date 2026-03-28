@@ -1,1 +1,2 @@
-current_user_url
+import my_utils as mu;
+print(mu.is_even(101))

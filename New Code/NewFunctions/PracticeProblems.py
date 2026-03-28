@@ -20,6 +20,10 @@
 #     return fir+' '+last;
 # print(full_name('syam','prasad'))
 
+# def fullName(first, last):
+#     return f"{first} {last}";
+# print("Full Name : ",fullName("Syam","Venni"))
+
 
 
 # Write a function calculate_area(length, width=10) that returns the area of a rectangle. Test it by calling the function with:
@@ -33,18 +37,37 @@
 
 
 # 3. Lambda Functions
-# Write a recursive function factorial(n) that returns the factorial of a number.
+# Write a lambda function that adds two numbers and test it.
+# sum = lambda a,b: a+b;
+# print("Sum : ",sum(2,2));
 
 
+# Create a list [1, 2, 3, 4, 5] and use map() with a lambda function to get their squares.
+# mapnum = [1, 2, 3, 4, 5];
+# res = list(map(lambda x: x**2, mapnum))
+# print("Result : ",res)
+
+
+# Write a recursive function Factorail(n) that returns the fibanacci of a number.
+# def factorial(n):
+#     if(n==1 or n== 0): return 1;
+#     return n * factorial(n-1);
+# factorialRes = factorial(5)
+# print(factorialRes)
+
+
+
+
+# Write a recursive function fibanacci(n) that returns the fibanacci of a number.
 
 # 4. Recursion in Python
-# Write a recursive function factorial(n) that returns the factorial of a number.
-# factorial series : 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
-# def factorial(n):
+# Write a recursive function fibanacci(n) that returns the fibanacci of a number.
+# fibanacci series : 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
+# def fibanacci(n):
 #     if(n == 1 or n == 0): 
 #         return n;
-#     return factorial(n-1) + factorial(n-2);
-# print(factorial(15));
+#     return fibanacci(n-1) + fibanacci(n-2);
+# print(fibanacci(15));
 
 # Write a recursive function sum_of_digits(n) that returns the sum of all digits of a given number.
 
@@ -77,10 +100,66 @@
 # import requests as r;
 # print(r.get('https://api.github.com'))
 
-import requests
+# import requests
 
 # Send a GET request to the GitHub API
-response = requests.get('https://api.github.com')
-print(response.text)
-print("Status Code:", response.status_code)
-print("Response current_user_url:", response.json()['current_user_url']);
+# response = requests.get('https://api.github.com')
+# print(response.text)
+# print("Status Code:", response.status_code)
+# print("Response current_user_url:", response.json()['current_user_url']);
+
+
+
+
+
+
+
+
+# 6. Variable Scope and Docstrings
+# 1. Write a function increment() that has a local variable counter initialized to 0 and increments it by 1 each time it is called. Observe whether the value persists across function calls.
+# def increment():
+#     counter = 0;
+#     counter = counter+1
+#     return counter;
+# print(increment())
+# print(increment())
+# print(increment())
+
+
+
+# Write a function multiply(a, b) that has a proper docstring explaining what it does. Then use help(multiply) to display the docstring.
+
+# def multiply(a,b):
+#     ''' This function results product of a and b
+#         a is first Number (int)
+#         b is second number (int)
+#         this returns a*b as a result.
+#     '''
+#     return a*b;
+# help(multiply(31,2))
+
+
+
+
+
+
+
+
+# 7. Bonus Challenges
+# 1. Write a recursive function fibonacci(n) that prints the first n Fibonacci numbers.
+
+
+
+# 7. Bonus Challenges
+# Write a function safe_divide(a, b) that returns the result of a / b, but returns "Cannot divide by zero" if b is 0.
+
+# def safe_divide(a,b):
+#     if(b == 0): return f"Cannot divide by Zero"
+#     return a/b;
+# print(safe_divide(10,10))
+
+
+# Create a small module my_utils.py with a function is_even(n) that returns True if n is even. Import and use it in another Python file.
+import my_utils as mu;
+print(mu.is_even(0.2323))
+
